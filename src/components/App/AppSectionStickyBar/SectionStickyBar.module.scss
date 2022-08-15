@@ -1,0 +1,21 @@
+@use "styles/common" as *;
+
+.SectionStickyBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0px;
+  // position: relative;
+  .sectionHeaderTitle {
+    // position: sticky;
+    // z-index: 1;
+    // top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    // margin-bottom: 12px;
+  }
+  // .sectionHeaderButton {
+  //   flex-shrink: 0;
+  // }
+}

@@ -1,0 +1,135 @@
+@use "styles/common" as *;
+
+.VideoSection {
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .overlay {
+    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.5) 99%);
+    // background-color: #000;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  .starDecoration {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+
+    &.left {
+      position: absolute;
+      bottom: 48px;
+      left: 0;
+    }
+
+    &.right {
+      position: absolute;
+      top: 48px;
+      right: 0;
+    }
+
+    img {
+      margin: 6px;
+    }
+  }
+
+  .coverVideoContainer {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+
+    .coverVideo {
+      // position: absolute;
+      // z-index: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 80vh;
+
+      // @include responsive('md') {
+      //   height: 700px;
+      // }
+
+      // height: 100%;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
+    }
+
+    :global {
+
+      *::-webkit-media-controls-panel {
+        display: none !important;
+        -webkit-appearance: none;
+
+      }
+
+      *::--webkit-media-controls-play-button {
+        display: none !important;
+        -webkit-appearance: none;
+
+      }
+
+      *::-webkit-media-controls-start-playback-button {
+        display: none !important;
+        -webkit-appearance: none;
+
+      }
+
+      .player-controls {
+        display: none;
+      }
+    }
+  }
+
+  .sectionContentContainer {
+    position: relative;
+
+    .sectionContent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      column-gap: 96px;
+      width: 100%;
+
+      .title {
+        color: #fff;
+        font-family: 'MonumentExtended';
+        font-size: 30px;
+        line-height: 36px;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        font-weight: bold;
+        text-align: center;
+
+        @include responsive('md') {
+          text-align: left;
+          font-size: 40px;
+          line-height: 46px;
+        }
+      }
+
+      .description {
+        color: #fff;
+        // font-family: 'MonumentExtended';
+        font-size: 16px;
+        max-width: 600px;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        // font-weight: bold;
+        text-align: center;
+        opacity: 0.6;
+      }
+
+    }
+  }
+}

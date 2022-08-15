@@ -1,0 +1,179 @@
+@use "styles/common" as *;
+
+.ResponsiveHeader {
+  // background-color: $color-dark-bg-card;
+  // background-color: transparent;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  height: $app-header-height;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+
+  @include responsive('md') {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .leftPart {
+    display: flex;
+    align-items: center;
+  }
+
+  .rightPart {}
+
+  a.appLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: #fff;
+
+    // margin-right: 24px;
+    img {
+      height: 20px;
+    }
+
+    .separator {
+      margin: 0 12px;
+      width: 1px;
+      height: 15px;
+      display: block;
+      background-color: #fff;
+    }
+  }
+
+  .menuButton {
+    color: #fff;
+  }
+}
+
+.ResponsiveMenuModal {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+
+  :global {
+    .app-responsive-menu-modal {
+      max-width: 100vw;
+      top: 0;
+      margin: 0 0 0 0;
+      padding: 0;
+      border-radius: 0;
+
+      .ant-modal-content {
+        border-radius: 0;
+        width: 100%;
+
+        .ant-modal-close {
+          display: none;
+          // color: #ffffff;
+        }
+
+        .ant-modal-body {
+          padding: 0;
+          height: 100vh;
+          background-color: $color-dark-bg-darkest;
+          // background-image: url('/illustration-vision.png');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+
+          .modal-header {
+            background-color: $color-dark-bg-darkest;
+            height: 80px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .container {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+
+              .left-part {
+                display: flex;
+                align-items: center;
+
+                a.app-logo {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: center;
+                  font-weight: 500;
+                  color: #fff;
+                  margin-right: 24px;
+
+                  img {
+                    width: 30px;
+                  }
+
+                  .separator {
+                    margin: 0 12px;
+                    width: 1px;
+                    height: 15px;
+                    display: block;
+                    background-color: #fff;
+                  }
+                }
+              }
+
+              .right-part {
+                .close-button {
+                  color: #fff;
+                }
+              }
+            }
+          }
+
+          .modal-content {
+            // padding: 48px 0px;
+
+            .page-menu {
+              a {
+                display: block;
+                // text-align: center;
+                text-transform: uppercase;
+                font-size: 18px;
+                color: #000;
+                font-weight: bold;
+                padding: 12px 32px;
+
+                &.app-button-container {
+                  // background-color: #fff;
+                  // background: linear-gradient(to right, #10D0FE, #9800FF);
+                  padding: 24px 32px;
+                  border: 2px solid #fff;
+                  border-radius: 17px;
+                  height: 50px;
+                  border-radius: 25px;
+                  // color: #;
+                  font-weight: bold;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+
+                  .app-button {
+                    // background: linear-gradient(to right, #10D0FE, #9800FF);
+                    // -webkit-background-clip: text;
+                    // -webkit-text-fill-color: transparent;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,208 @@
+@use "styles/common" as *;
+
+.DesktopHeader {
+  // background-color: $color-dark-bg-card;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  height: $app-header-height;
+  padding: 0 24px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+  // border-bottom: 1px solid $color-separator;
+  // border-bottom: 1px solid #000;
+
+  @include responsive("md") {
+    display: flex;
+  }
+
+  .leftPart {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+  }
+
+  .rightPart {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  a.appLogo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: #fff;
+
+    // margin-right: 24px;
+    img {
+      height: 20px;
+    }
+
+    .separator {
+      margin: 0 12px;
+      width: 1px;
+      height: 18px;
+      display: block;
+      background-color: #fff;
+    }
+
+    .portalTitle {
+      font-size: 16px;
+      margin-top: 3px;
+    }
+
+    .portalHole {
+      margin: 0 12px;
+      position: relative;
+      width: 16px;
+      height: 16px;
+      background: linear-gradient(270deg, rgb(171, 102, 255) 0%, rgb(20, 241, 149) 101.39%);
+      border-radius: 50%;
+      animation: rotate 1.5s linear infinite;
+
+      .span {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: linear-gradient(270deg, rgb(171, 102, 255) 0%, rgb(20, 241, 149) 101.39%);
+        border-radius: 50%;
+
+        &:nth-child(1) {
+          filter: blur(5px);
+        }
+
+        &:nth-child(2) {
+          filter: blur(10px);
+        }
+
+        &:nth-child(3) {
+          filter: blur(25px);
+        }
+
+        &:nth-child(4) {
+          filter: blur(150px);
+        }
+      }
+
+      .portalHoleInner {
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        background-color: #000;
+        top: 2px;
+        left: 2px;
+        border-radius: 50%;
+      }
+    }
+
+    .developmentLabel {
+      width: fit-content;
+      background-color: $color-dark-bg-card-label;
+      padding: 8px 16px;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 12px;
+      letter-spacing: 1px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    @keyframes rotate {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    // span {
+    //   // color: #000;
+    //   font-weight: bold;
+    //   border-radius: 6px;
+    //   padding: 3px 6px;
+    //   background: linear-gradient(270deg, rgb(171, 102, 255) 0%, rgb(20, 241, 149) 101.39%);
+    // }
+  }
+
+  .menuLink {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-right: 24px;
+    height: 40px;
+    white-space: nowrap;
+    font-size: 14px;
+    font-family: 'MonumentExtended';
+    text-transform: uppercase;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    transition: all 0.25s ease-in;
+
+    @include responsive('md') {
+      &:hover {
+        opacity: 1;
+        color: $color-theme-yellow;
+      }
+    }
+  }
+
+  .loginButtonContainer {
+    margin-left: 12px;
+  }
+
+  .userContrainer {
+    // margin-left: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px 10px 10px;
+    background-color: $color-dark-bg-input;
+    border-radius: 30px;
+    height: 60px;
+    overflow: hidden;
+
+    .userImagePart {
+      .userProfilePicture {
+        height: 40px;
+        width: 40px;
+        border-radius: 24px;
+        margin-right: 12px;
+        background: linear-gradient(270deg,
+            rgb(171, 102, 255) 0%,
+            rgb(20, 241, 149) 101.39%);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+    .userTextPart {
+      .username {
+        margin: 0 6px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .userAddress {
+        margin: 0 6px;
+        color: #fff;
+        font-size: 12px;
+        font-weight: bold;
+        opacity: 0.7;
+      }
+    }
+  }
+}

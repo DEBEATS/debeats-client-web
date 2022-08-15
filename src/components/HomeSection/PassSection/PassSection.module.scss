@@ -1,0 +1,166 @@
+@use "styles/common" as *;
+
+@mixin white-gradient {
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+$animationSpeed: 40s;
+
+// Animation
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 7))
+  }
+}
+
+.PassSection {
+  position: relative;
+  padding-top: 96px;
+  margin-bottom: 96px;
+  overflow: hidden;
+
+  .sliderContainer {
+    align-items: center;
+    // background: #E3E3E3;
+    display: flex;
+    justify-content: center;
+
+    .slider {
+      // background: white;
+      box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+      height: 200px;
+      margin: auto;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+
+      &::before,
+      &::after {
+        // @include white-gradient;
+        content: "";
+        height: 200px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+      }
+
+      &::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+      }
+
+      &::before {
+        left: 0;
+        top: 0;
+      }
+
+      .slideTrack {
+        animation: scroll $animationSpeed linear infinite;
+        display: flex;
+        width: calc(250px * 14);
+
+        &.row2 {
+          animation-delay: 2.5s;
+        }
+      }
+
+      .slide {
+        height: 200px;
+        margin-right: 24px;
+        display: flex;
+        align-items: center;
+
+        img {
+          box-shadow: 0 10px 20px -5px $color-dark-bg-card;
+          width: 100%;
+          border-radius: 10px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  .sectionLayout {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 24px;
+    align-items: center;
+    padding-top: 96px;
+    // width: 100vw;
+    overflow: hidden;
+
+    @include responsive('md') {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .mockUpImage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        max-height: 400px;
+        max-width: 100%;
+        // transform: rotate(350deg);
+      }
+    }
+
+    .sectionHeader {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 24px;
+      align-items: center;
+      justify-content: center;
+
+      @include responsive('md') {
+        align-items: flex-start;
+      }
+
+      .title {
+        color: $color-theme-green;
+        font-size: 36px;
+        text-transform: uppercase;
+        font-family: 'MonumentExtended';
+        font-weight: bold;
+        letter-spacing: 2px;
+        line-height: 40px;
+        margin-bottom: 24px;
+        text-align: center;
+
+        @include responsive('md') {
+          text-align: unset;
+        }
+      }
+
+      .subtitle {
+        color: #fff;
+        opacity: 0.5;
+        font-size: 16px;
+        margin-bottom: 24px;
+        text-align: center;
+
+        @include responsive('md') {
+          text-align: unset;
+        }
+      }
+
+      .download {
+        width: fit-content;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 24px;
+
+        a {
+          img {
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,165 @@
+@use "styles/common" as *;
+
+.Footer {
+  background-color: #000000;
+  color: $nba-colors-black-100;
+  overflow: hidden;
+  padding-top: 48px;
+
+  @media only screen and (min-width: 768px) {
+    padding-top: 96px;
+  }
+
+  :global {
+    .seperator {
+      height: 1px;
+      background-color: #fff;
+      opacity: 0.5;
+      margin-bottom: 48px;
+
+      @media only screen and (min-width: 768px) {
+        margin-bottom: 96px;
+      }
+    }
+
+    padding-bottom: 96px;
+
+    .website-link {
+      margin-bottom: 96px;
+    }
+
+    .widget {
+      // min-height: 100px;
+      font-size: 14px;
+      margin-bottom: 48px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      // text-align: center;
+
+      @media only screen and (min-width: 768px) {
+        text-align: unset;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
+      img.app-logo {
+        width: fit-content;
+        display: block;
+        height: 40px;
+        margin-bottom: 24px;
+      }
+
+      img.web3games-logo {
+        width: fit-content;
+        margin: 12px 0;
+        display: block;
+        height: 24px;
+        margin-bottom: 24px;
+      }
+
+      .title {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        opacity: 0.7;
+        margin-bottom: 24px;
+        text-align: center;
+        text-transform: uppercase;
+
+        @media only screen and (min-width: 768px) {
+          text-align: left;
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          color: #fff;
+          margin-bottom: 12px;
+          text-align: center;
+
+          @media only screen and (min-width: 768px) {
+            text-align: left;
+          }
+        }
+      }
+
+      img.social-icon {
+        height: 16px;
+        width: 16px;
+        margin-right: 12px;
+        opacity: 0.7;
+      }
+
+      a {
+        color: #fff;
+        font-size: 14px;
+
+        &:hover {
+          color: rgba(255, 255, 255, .8);
+        }
+      }
+
+      img.download-button {
+        height: 50px;
+        // border: 1px solid #fff;
+        border-radius: 7px;
+        overflow: hidden;
+
+        @media only screen and (min-width: 768px) {
+          height: 50px;
+        }
+      }
+    }
+
+    .website-info {
+      border-top: 1px solid $color-separator;
+      padding-top: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media only screen and (min-width: 768px) {
+        flex-direction: row;
+      }
+
+      .copyright {
+        display: block;
+        text-align: center;
+        color: #888888;
+        font-size: 12px;
+        text-transform: uppercase;
+
+        @media only screen and (min-width: 768px) {
+          display: unset;
+          text-align: left;
+          margin-right: 12px;
+        }
+      }
+
+      .security {
+        display: block;
+        text-align: center;
+        color: #888888;
+        font-size: 12px;
+        text-transform: uppercase;
+
+        @media only screen and (min-width: 768px) {
+          display: unset;
+          text-align: left;
+          margin-right: 12px;
+        }
+
+        .anticon {
+          margin-right: 3px;
+        }
+      }
+    }
+
+  }
+}

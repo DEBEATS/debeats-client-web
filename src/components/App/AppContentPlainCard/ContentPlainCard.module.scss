@@ -1,0 +1,35 @@
+@use "styles/common" as *;
+
+.ContentPlainCard {
+  color: #fff;
+  width: 100%;
+  overflow: hidden;
+  background-color: $color-dark-bg-card;
+  border-radius: 24px;
+  padding: 24px;
+  margin-bottom: 24px;
+
+  .cardBody {
+
+    .title {
+      font-size: 16px;
+      font-weight: 700;
+      opacity: 0.7;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .content {
+      width: 100%;
+      margin-bottom: 24px;
+      white-space: pre-line;
+      font-size: 14px;
+
+      @include responsive("md") {
+        font-size: 16px;
+        opacity: 0.7;
+      }
+    }
+
+  }
+}

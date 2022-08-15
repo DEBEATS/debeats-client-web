@@ -1,0 +1,52 @@
+@use "styles/common" as *;
+
+.DropdownMenu {
+  flex-shrink: 0;
+  min-width: fit-content;
+  min-width: 150px;
+  width: fit-content;
+  :global {
+    .ant-dropdown-menu.ant-dropdown-menu-dark {
+      overflow: hidden;
+      border-radius: 24px;
+      background-color: $color-dark-bg-card;
+      border: 1px solid $color-dark-bg-card;
+      padding: 0;
+      // box-shadow: rgba(51, 51, 51, 0.15) 0px 4px 16px 0px;
+    }
+    .ant-dropdown-menu-item {
+      margin: 0;
+      margin-bottom: 0;
+      background-color: $color-dark-bg-card;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 24px;
+      color: #fff;
+      a {
+        color: #fff;
+      }
+      .ant-dropdown-menu-title-content {
+        a {
+          color: #fff;
+        } 
+      }
+      &.ant-dropdown-menu-item-only-child {
+        margin-bottom: 0;
+        color: #fff;
+      }
+      &:hover {
+        color: #000;
+        background-color: $color-theme-green;
+        font-weight: bold;
+        .ant-dropdown-menu-title-content {
+          a {
+            color: #000;
+          } 
+        }
+      }
+    }
+  }
+}

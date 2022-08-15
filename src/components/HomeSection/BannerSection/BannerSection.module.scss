@@ -1,0 +1,157 @@
+@use "styles/common" as *;
+
+.BannerSection {
+  padding: 200px 0;
+  margin-bottom: 24px;
+  overflow: hidden;
+  position: relative;
+
+  .sectionContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    width: 100%;
+
+
+    @include responsive('md') {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 96px;
+    }
+
+    .leftPart {
+      display: flex;
+      flex-direction: column;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(/graphic-banner-section-d.png);
+
+      @include responsive('md') {
+        background-image: none;
+      }
+
+      .title {
+        color: #fff;
+        font-family: 'MonumentExtended';
+        font-size: 30px;
+        line-height: 36px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        font-weight: bold;
+
+        @include responsive('md') {
+          text-align: left;
+          font-size: 60px;
+          line-height: 76px;
+        }
+      }
+
+      .description {
+        display: flex;
+        // flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-family: 'MonumentExtended';
+        font-size: 14px;
+        max-width: 600px;
+        text-transform: uppercase;
+        margin-bottom: 48px;
+
+        @include responsive('md') {
+          font-size: 16px;
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+
+        img {
+          margin: 0 12px;
+          height: 20px;
+
+          @include responsive('md') {
+            height: 22px;
+          }
+        }
+      }
+
+      .buttonGrid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 24px;
+        row-gap: 24px;
+
+        @include responsive('md') {
+          width: fit-content;
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .button {
+          color: #fff;
+          background-color: $color-dark-bg-card;
+          font-size: 12px;
+          border-radius: 5px;
+          transition: 0.3s;
+          text-align: center;
+          font-weight: bold;
+          text-transform: uppercase;
+          flex-shrink: 0;
+          letter-spacing: 2px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 12px 24px;
+          width: 100%;
+          font-family: 'MonumentExtended';
+          min-height: 60px;
+
+          @include responsive('md') {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+
+        a {
+          width: 100%;
+          display: block;
+          margin-right: 0px;
+          padding-right: 0px;
+          border-radius: 5px;
+          border: 1px solid $color-separator;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #000;
+          transition: all 0.25s ease-in;
+
+          @include responsive('md') {
+            &:hover {
+              border: 1px solid $color-theme-yellow;;
+              color: $color-theme-yellow;
+            }
+          }
+
+          img {
+            // border: 1px solid $color-separator;
+            height: 60px;
+            padding: 6px 0;
+          }
+        }
+      }
+    }
+
+    .rightPart {
+      height: 400px;
+      min-width: 400px;
+      // background-color: gray;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: none;
+
+      @include responsive('md') {
+        display: block;
+      }
+    }
+  }
+}

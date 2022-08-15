@@ -1,0 +1,18 @@
+@use "styles/common" as *;
+
+.AppLayout {
+  min-height: calc(100vh - $app-header-height);
+  // min-height: calc(100vh);
+  // background-color: red;
+  display: flex;
+  flex-direction: column;
+
+  .appAlert {
+    background-color: $color-theme-green;
+    background-color: rgb(235, 84, 188);
+    padding: 12px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+  }
+}

@@ -1,0 +1,164 @@
+// prettier-ignore
+// @forward "~modularscale-sass/stylesheets/modularscale" with (
+//   $modularscale: (
+//     base: 16px,
+//     ratio: 1.125
+//   )
+// );
+
+// Vairables
+$main-font: thicccboi, sans-serif;
+$gutter-width: 32px;
+$app-header-height: 80px;
+
+// Colors
+$color-gradient-1: #fa5c7f;
+$color-gradient-2: #98a0ff;
+$color-gradient-3: #5ef0d9;
+$color-theme-green: rgb(20, 241, 149);
+$color-theme-yellow: rgb(199, 233, 12);
+// $color-dark-bg-1: #121314;
+// $color-dark-bg-1: #000;
+// $color-dark-bg-1: #1c1d23;
+// $color-separator: rgba(244, 245, 246, 0.15);
+$color-separator: rgba(255, 255, 255, 0.3);
+$color-white: #fff;
+$color-hero-subheading: #b7b4c7;
+
+// Functions
+@function rhythm($n) {
+  @return 6px * $n;
+}
+
+@function calc-colmuns($n) {
+  @return $gutter-width * ($n - 1)+77px * $n;
+}
+
+// Mixin
+@mixin gradient-text {
+  // background: linear-gradient(145deg, #fa5c7f, #98a0ff, #5ef0d9);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// Responsive layout ref to antd grid design
+// https://ant.design/components/grid/#Col
+
+$grid-width-xs: 575px;
+$grid-width-sm: 576px;
+$grid-width-md: 768px;
+$grid-width-lg: 992px;
+$grid-width-xl: 1200px;
+$grid-width-xxl: 1600px;
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint =="xxl" {
+    @media only screen and (min-width: $grid-width-xxl) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint =="xl" {
+    @media only screen and (min-width: $grid-width-xl) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint =="lg" {
+    @media only screen and (min-width: $grid-width-lg) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint =="md" {
+    @media only screen and (min-width: $grid-width-md) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint =="sm" {
+    @media only screen and (min-width: $grid-width-sm) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint =="xs" {
+    @media only screen and (max-width: $grid-width-xs) {
+      @content;
+    }
+  }
+}
+
+$color-kk-blue: #004acb;
+$color-kk-indigo: #6610f2;
+$color-kk-purple: #5733f5;
+$color-kk-purple-light: #6847f6;
+$color-kk-pink: #d63384;
+$color-kk-red: #ff3500;
+$color-kk-orange: #fd7e14;
+$color-kk-yellow: #ffc107;
+$color-kk-green: #1cf463;
+$color-kk-teal: #20c997;
+$color-kk-cyan: #0dcaf0;
+$color-kk-white: #fff;
+$color-kk-gray-100: #f8f9fa;
+$color-kk-gray-200: #e9ecef;
+$color-kk-gray-300: #dee2e6;
+$color-kk-gray-400: #ced4da;
+$color-kk-gray-500: #b5b5b8;
+$color-kk-gray-600: #2f3437;
+$color-kk-gray-700: #272932;
+$color-kk-gray-800: #1f2028;
+$color-kk-gray-900: #1c1d23;
+$color-kk-primary: #5733f5;
+$color-kk-secondary: #6c757d;
+$color-kk-success: #1cf463;
+$color-kk-info: #0dcaf0;
+$color-kk-warning: #ffc107;
+$color-kk-danger: #ff3500;
+$color-kk-light: #f8f9fa;
+$color-kk-gray-light: #b5b5b8;
+$color-kk-gray: #6c757d;
+$color-kk-dark: #1c1d23;
+$color-kk-rare: #fd9a13;
+$color-kk-epic: #ff28db;
+$color-kk-legendary: #b356ff;
+
+$color-kk-black: #000;
+$color-dark-bg-card: $color-kk-gray-900;
+$color-dark-bg-card-hover: $color-kk-gray-700;
+$color-dark-bg-card-label: $color-kk-gray-600;
+$color-dark-bg-input: $color-kk-gray-700;
+$color-dark-bg-darkest: #121212;
+// $color-dark-bg-input: $color-kk-gray-700;
+
+$nba-colors-black-100: #808396;
+$nba-colors-black-200: #6B6B7E;
+$nba-colors-black-300: #5B5E6C;
+$nba-colors-black-400: #4B4D59;
+$nba-colors-black-500: #393B45;
+$nba-colors-black-600: #2B2C33;
+$nba-colors-black-700: #212127;
+$nba-colors-black-800: #17171B;
+$nba-colors-black-900: #0D0D0F;
+$nba-colors-white-200: #FFFFFF;
+$nba-colors-whiteAlpha-50: rgba(255, 255, 255, 0.04);
+$nba-colors-whiteAlpha-100: rgba(255, 255, 255, 0.06);
+$nba-colors-whiteAlpha-200: rgba(255, 255, 255, 0.08);
+$nba-colors-whiteAlpha-300: rgba(255, 255, 255, 0.16);
+$nba-colors-whiteAlpha-400: rgba(255, 255, 255, 0.24);
+$nba-colors-whiteAlpha-500: rgba(255, 255, 255, 0.36);
+$nba-colors-whiteAlpha-600: rgba(255, 255, 255, 0.48);
+$nba-colors-whiteAlpha-700: rgba(255, 255, 255, 0.64);
+$nba-colors-whiteAlpha-800: rgba(255, 255, 255, 0.80);
+$nba-colors-whiteAlpha-900: rgba(255, 255, 255, 0.92);
+$nba-colors-blackAlpha-50: rgba(0, 0, 0, 0.04);
+$nba-colors-blackAlpha-100: rgba(0, 0, 0, 0.06);
+$nba-colors-blackAlpha-200: rgba(0, 0, 0, 0.08);
+$nba-colors-blackAlpha-300: rgba(0, 0, 0, 0.16);
+$nba-colors-blackAlpha-400: rgba(0, 0, 0, 0.24);
+$nba-colors-blackAlpha-500: rgba(0, 0, 0, 0.36);
+$nba-colors-blackAlpha-600: rgba(0, 0, 0, 0.48);
+$nba-colors-blackAlpha-700: rgba(0, 0, 0, 0.64);
+$nba-colors-blackAlpha-800: rgba(0, 0, 0, 0.80);
+$nba-colors-blackAlpha-900: rgba(0, 0, 0, 0.92);

@@ -1,0 +1,19 @@
+@use "styles/common" as *;
+
+.AppContainer {
+  width: 100%;
+  padding-right: rhythm(3);
+  padding-left: rhythm(3);
+  // background-color: red;
+
+  @include responsive('md') {
+    // max-width: $grid-width-xl + $gutter-width * 4;
+    max-width: $grid-width-xl;
+    // padding-right: $gutter-width;
+    // padding-left: $gutter-width;
+    // padding-right: 0;
+    // padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,63 @@
+@use "styles/common" as *;
+
+.AppPortalLayout {
+  width: 100%;
+  // background-color: red;
+  
+  .portalRow {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $gutter-width;
+
+    @include responsive("lg") {
+      grid-template-columns: 1fr 400px;
+    }
+  }
+
+  .AppPortalLayoutInner {
+    overflow: hidden;
+    height: unset;
+    overflow: unset;
+    // @include responsive("md") {
+    //   height: calc(100vh - $app-header-height);
+    // }
+    @include responsive("xl") {
+      max-width: $grid-width-xl + $gutter-width * 4;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .portalColumn {
+      overflow-x: hidden;
+      height: unset;
+      @include responsive("md") {
+        // height: calc(100vh - $app-header-height);
+        // overflow-y: scroll;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
+      &.centerPart {
+        background-color: yellow;
+        width: 100%;
+        .footer {
+          display: block;
+          // @include responsive("md") {
+          //   display: none;
+          // }
+        }
+      }
+
+      &.rightPart {
+        background-color: green;
+        width: 100%;
+        display: flex;
+        @include responsive("md") {
+          width: 400px;
+        }
+      }
+    }
+  }
+}

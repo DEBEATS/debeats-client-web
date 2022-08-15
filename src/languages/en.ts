@@ -1,0 +1,128 @@
+const en = {
+  app_head_title: `DEBEATS | THE #1 DECENTRALIZED RHYTHM GAME`,
+  app_og_description: 'DEBEATS is the first decentralized music NFT game built on Solana where you can play, create and earn tokens.',
+
+  app_header_menu_item_title_web3games_chips: 'Web3Games CH1P',
+  app_header_menu_item_title_my_chips: 'My CH1P',
+  app_header_menu_item_title_join_discord: 'Join Discord',
+  app_header_menu_item_title_my_profile: 'My Profile',
+  app_header_menu_item_title_profile_settings: 'Edit Profile',
+  app_header_menu_item_title_log_out: 'Log Out',
+  app_header_menu_item_title_games: 'Games',
+  app_header_menu_item_title_nfts: '🖼 NFTs',
+  app_header_menu_item_title_submit_games: 'Submit Project',
+  app_header_menu_item_title_submissions: 'Review Progress',
+  app_header_menu_item_title_home: 'Home',
+  app_header_menu_item_title_database: 'Database',
+  app_header_menu_item_title_community: 'Community',
+  app_header_menu_item_title_player_id_login: 'Player ID Login',
+  app_header_menu_item_title_my_messages: 'My Messages',
+  app_header_menu_item_title_launchpad: 'Launchpad',
+
+  app_sidebar_menu_item_games: 'Games',
+  app_sidebar_menu_item_nfts: 'NFTs',
+  app_sidebar_menu_item_my_message: 'My Messages',
+  app_sidebar_menu_item_my_profile: 'My Profile',
+  app_sidebar_menu_item_log_out: 'Log Out',
+
+  app_footer_website_info_copyright: '© 2022 DEBEATS',
+  app_footer_website_info_security: 'Secured with SSL',
+
+  list_load_more_card_title: 'Load More',
+
+  view_more_button_title: 'View More',
+  more_button_title: 'More',
+  follow_button_title_follow: 'Follow',
+  follow_button_title_unfollow: 'Unfollow',
+  follow_button_title_following: 'Following',
+
+  home_page_welcome_message: 'Welcome to the Portal',
+  home_page_chip_collect_button: 'Collect',
+  home_page_learn_more_about_player_id: 'Learn more about Player ID',
+  home_page_section_latest_game_title: '🕹 Latest Blockchain Games',
+  home_page_section_view_all_game_button: 'Go to view all games',
+  home_page_section_latest_nft_title: '🖼 Latest NFTs',
+  home_page_section_view_all_nft_button: 'Go to view all NFTs',
+  home_page_section_featured_player_title: '👥 Featured Player Plaza',
+  home_page_section_latest_player_title: '👋🏻 New Players',
+
+  project_submit_banner_title: 'Share New Projects',
+  project_submit_banner_subtitle: 'Become Web3Games contributor and share with the community now!',
+  project_submit_banner_button: 'Submit',
+
+  user_profile_page_following: 'Following',
+  user_profile_page_followers: 'Followers',
+  user_profile_page_edit_profile: 'Edit Profile',
+  user_profile_page_joined_on: 'Joined on',
+  user_profile_page_connect_wallet: '🔗 Connect wallet to complete your setup',
+  user_profile_page_upvotes: 'Upvotes',
+
+  game_project_list_page_title: 'Game Database',
+  nft_project_list_page_title: 'NFT Database',
+  community_chip_list_page_title: 'Community NFTs',
+  cryptocurrency_list_page_title: 'Game Market Cap',
+  web3games_chain_page_title: 'Web3Games Chain',
+  web3games_studio_page_title: 'Web3Games Studios',
+  my_message_list_page_title: 'My Messages',
+  my_profile_page_title: 'My Profile',
+
+  user_login_email_page_header_subtitle: 'Web3Games Login',
+  user_login_email_page_header_title: 'Enter your email',
+  user_login_email_page_header_description: 'Make sure to use a valid email to receive the verification code.',
+  user_login_email_page_continue_button: 'Continue',
+  user_login_email_page_email_placeholder: 'Your Email',
+  user_login_email_page_email_validation_message: 'Please input a valid email.',
+
+  user_login_verify_email_login_page_header_title: 'Check your inbox',
+  user_login_verify_email_login_page_header_subtitle: 'Welcome Back',
+  user_login_verify_email_login_page_email_resent_email_message: `We've re-sent you the verification code.`,
+  user_login_verify_email_login_page_description_1: `A verification code has been sent to your email at {email}.`,
+  user_login_verify_email_login_page_description_2: 'Please enter the code to continue.',
+  user_login_verify_email_login_page_verification_code_validation_message: 'Please input a valid code.',
+  user_login_verify_email_login_page_verification_code_placeholder: 'Verification Code',
+  user_login_verify_email_login_page_login_button: 'Login Now',
+  user_login_verify_email_login_page_email_not_received: `Didn't receive your code?`,
+  user_login_verify_email_login_page_email_not_received_or: 'or',
+  user_login_verify_email_login_page_email_resent_button: 'Resend your code',
+  user_login_verify_email_login_page_email_change_button: 'Use a different email',
+  user_login_verify_email_login_page_email_welcome_back: 'Welcome Back',
+
+  user_login_verify_email_register_page_verification_code_used: 'The verification code is registered.',
+  user_login_verify_email_register_page_continue_button: 'Verify & Continue',
+
+  user_login_profile_register_page_register_succeed_message: `Congrats! You've successfully registered!`,
+  user_login_profile_register_page_name_placeholder: 'Full Name',
+  user_login_profile_register_page_name_validation_message: 'Please input a valid name.',
+  user_login_profile_register_page_username_placeholder: 'Username',
+  user_login_profile_register_page_username_validation_message: 'Please input a valid username.',
+  user_login_profile_register_page_register_button: 'Register',
+  user_login_profile_register_page_header_title: 'Enter your profile',
+
+  user_login_page_agreement: 'By continuing, you agree to our {terms} and {policy}.',
+
+  image_upload_component_title_loading: 'Loading',
+  image_upload_component_title_upload: 'Upload',
+
+  web3_connect_widget_connect_button_title: 'Connect Wallet',
+
+  web3_status_widget_message_wrong_network: 'Incorrect Network',
+  web3_status_widget_message_error_connecting: 'Error Connecting',
+
+  web3_connect_modal_install_metamask: 'Install MetaMask',
+  web3_connect_modal_title: 'Connect your wallet',
+  web3_connect_modal_subtitle: 'Connect with one of available wallet providers or create a new wallet.',
+  web3_connect_modal_footer: 'We do not own your private keys and cannot access your funds without your confirmation.',
+  web3_connect_modal_message_wallet_connected: 'Wallet Connected',
+  web3_connect_modal_message_wrong_network: 'Please connect to the Ethereum, Polygon or BSC.',
+
+  web3_account_modal_title: 'Account',
+  web3_account_modal_subtitle: 'Your wallet address',
+  web3_account_modal_view_explorer: 'View on explorer',
+  web3_account_modal_copy_address: 'Copy Address',
+  web3_account_modal_message_address_copied: `You've copied the address.`,
+  web3_account_modal_disconnect: 'Disconnect',
+}
+
+export default {
+  ...en,
+}
